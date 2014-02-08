@@ -49,6 +49,8 @@
 							.addClass(this.tagClass)
 							.text(el);
 
+			console.log(this.tagClass);
+
 			return newEl;
 		},
 
@@ -58,8 +60,6 @@
 			var regEx = new RegExp(this.find, 'g');
 			var newCopy = this.container.text().replace( regEx, '<div class="dummy-div"></div>');
 			this.container.html(newCopy);
-
-
 
 			$('.dummy-div').wrap(newEl).remove();
 		},
